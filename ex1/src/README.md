@@ -1,4 +1,4 @@
-# This is the official implementation of the first assignment of NormanZ's `Pattern Recognition Course`, which have completed the classification of the 200-category omniglot dataset based on CNN and SVM
+This is the official implementation of the first assignment of NormanZ's `Pattern Recognition Course`, which have completed the classification of the 200-category omniglot dataset based on CNN and SVM
 
 ## Quick Start⚡
 
