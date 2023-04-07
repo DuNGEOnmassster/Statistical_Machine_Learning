@@ -130,7 +130,9 @@ class ResNet(nn.Module):
         output = self.fc(output)
 
         return output
-
+        
+from torchvision import datasets
+train_dataset = datasets.MNIST("./data", train=True, download=False, transform=train_transform)
 def resnet18():
     """ return a ResNet 18 object
     """

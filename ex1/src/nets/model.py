@@ -85,7 +85,7 @@ class Baseline2(nn.Module):
         self.conv2 = BasicBlock(16, 32, downsample=True)
         self.conv3 = BasicBlock(32, 64, downsample=True)
         self.classifier = nn.Linear(576, 200)
-        self.cls = BasicClassifier(576, 200)
+        # self.cls = BasicClassifier(576, 200)
     
     def forward(self, x):
         x = self.conv1(x)
@@ -97,8 +97,8 @@ class Baseline2(nn.Module):
 
         x = x.view(x.size(0), -1)
         # print(f"view x: {x.shape}")
-        # x = self.classifier(x)
-        x = self.cls(x)
+        x = self.classifier(x)
+        # x = self.cls(x)
         # print(f"classify: {x.shape}")
         # x = F.softmax(x, dim=1)
         # x = F.log_softmax(x, dim=1)
